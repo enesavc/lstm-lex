@@ -2,7 +2,7 @@
 This repo host the necessay files, data and codes/scripts that were utilized for the LSTM lexicon project.
 
 ## Summary
-The discovery of a wortshatz (“treasury of words”) in the posterior superior temporal lobe dates back to Carl Wernicke (1874/1969). Since then, the notion of a single localized store of word representation became increasingly less plausible as evidence accumulated for the widely distributed neural representation of lexico-semantic knowledge grounded in motor, perceptual and conceptual processes. Here, we ask whether the word representation is segregated in the human brain using computational modeling. We test the hypothesis that functional specialization of word representation in the brain is driven in part by the computational optimization for the unique problem of mapping between sound and articulation vs. the mapping between sound and meaning. We find that networks trained on the mapping between sound and articulation perform poorly on the recognition of mapping between sound and meaning and vice versa. We then show networks developed internal representations reflecting specialized task optimized functions without explicit training. Together, these findings indicate that functional specialization of word representation may reflect a computational optimization given the structure of the tasks that brains must solve, namely different featural projections of word form may be needed to support efficient linguistic processing. 
+
 
 ## Paper Citation
 Avcu, E., Hwang, M., Brown, K., Gow, D. (underreview). A Tale of Two Lexica: Investigating Computational Pressures on Word Representation with Deep Neural Networks. Submitted to Neurobiology of Language Special Issue: Cognitive Computational Neuroscience of Language.
