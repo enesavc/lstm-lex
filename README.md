@@ -17,4 +17,6 @@ We used cochleagrams of each sound file as the input to the network. A cochleagr
 ![image](https://user-images.githubusercontent.com/32641692/164516870-9198cd2c-5a5b-47e8-a102-030ecf4c1da8.png)
 
 ## Models
-We created two separate LSTM models and trained them independently on the same training data (8830 tokens for 883 words). Dorsal network was trained to differentiate between words using phonological information and a ventral network was trained to distinguish words based on distributional properties.See the paper for details. Model/Dorsal/Dorsal.ipynb and Model/Ventral/Ventral.ipynb have the model training codes with necessay componenets (partition data and output vectors).
+We created two separate LSTM models and trained them independently on the same training data (8830 tokens for 883 words). Dorsal network was trained to differentiate between words using arbitrary information and a ventral network was trained to distinguish words based on distributional properties. See the paper for details. Models/Dorsal.ipynb and Models/Ventral.ipynb have the model training codes with necessay componenets (partition data and output labels). See model structure below.
+![image](https://user-images.githubusercontent.com/32641692/164526923-b5879933-edd6-4482-89cc-3bdfc01f92c5.png)
+
