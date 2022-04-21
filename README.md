@@ -1,2 +1,2 @@
-# lstm-lex
-This repo will host the codes for the LSTM lexicon project.
+# LSTM-Lex
+This repo host the necessay files, data and codes/scripts that were utilized for the LSTM lexicon project.
