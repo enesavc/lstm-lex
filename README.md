@@ -22,3 +22,4 @@ We created two separate LSTM models and trained them independently on the same t
 
 ![image](https://user-images.githubusercontent.com/32641692/164526923-b5879933-edd6-4482-89cc-3bdfc01f92c5.png)
 
+Model accuracy was calculated as follows. During the training, we checkpointed (saved the model and weights in a checkpoint file) the model every 100 epochs, so that we could load the model and calculate our accuracy metrics as training time increased. We used cosine similarity as the accuracy metric. See the paper for details.
