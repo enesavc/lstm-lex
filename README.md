@@ -5,7 +5,7 @@ This repo host the necessay files, data and codes/scripts that were utilized for
 Avcu, E., Hwang, M., Brown, K., Gow, D. (underreview). A Tale of Two Lexica: Investigating Computational Pressures on Word Representation with Deep Neural Networks. Submitted to Neurobiology of Language Special Issue: Cognitive Computational Neuroscience of Language.
 
 ## Hardware, and Software
-Simulations were conducted on a Linux workstation with an Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz, 98-gb of RAM, and an NVIDIA Quadro RTX 8000 (48-gb) graphics card. Simulations were conducted using Python 3.6, TensorFlow 2.2.0, and Keras 2.4.3. Each model requires approximately 48 hours to train on this workstation. This repository (https://github.com/) provides an up-to-date container with all necessary explanations and jupyter notebooks for running our training code and analyses.
+Simulations were conducted on a Linux workstation with an Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz, 98-gb of RAM, and an NVIDIA Quadro RTX 8000 (48-gb) graphics card. Simulations were conducted using Python 3.6, TensorFlow 2.2.0, and Keras 2.4.3. Each model requires approximately 48 hours to train on this workstation. This repository provides an up-to-date container with all necessary explanations and jupyter notebooks for running our training code and analyses.
 
 
 ## Data
@@ -15,3 +15,6 @@ Data/883 Words.txt has all the words we have used in this project. These words w
 ### Cochleagrams
 We used cochleagrams of each sound file as the input to the network. A cochleagram is a spectrotemporal representation of an auditory signal designed to capture cochlear frequency decomposition (i.e., it has overlapping spectral filters whose width increases with center frequency). The cochleagrams were created using code that produced cochleagrams in other studies (Feather et. al., 2019; Kell et al., 2018). See below figure for a schematic representation of audio to a cochleagram. Cochleagram generation was done in Python, using the numpy and scipy libraries (Harris et al., 2020; Oliphant, 2007), with signal trimming via librosa (McFee et al., 2015). Please refer to https://github.com/jenellefeather/tfcochleagram for cochleagram generation. Data/Coch_Gen.ipynb shows how we created cochleagrams.
 ![image](https://user-images.githubusercontent.com/32641692/164516870-9198cd2c-5a5b-47e8-a102-030ecf4c1da8.png)
+
+## Models
+We created two separate LSTM models and trained them independently on the same training data (8830 tokens for 883 words). Dorsal network was trained to differentiate between words using phonological information and a ventral network was trained to distinguish words based on distributional properties.See the paper for details. Model/Dorsal/Dorsal.ipynb and Model/Ventral/Ventral.ipynb have the model training codes with necessay componenets (partition data and output vectors).
