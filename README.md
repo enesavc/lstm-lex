@@ -1,16 +1,14 @@
 # LSTM-Lex
 This repo host the necessay files, data and codes/scripts that were utilized for the LSTM lexicon project.
 
-## Summary
+## Summary of The Project
 Words play a pivotal role in almost every aspect of language processing. The dual-stream model of spoken language processing (Hickok & Poeppel, 2007) suggests that processing is organized broadly into parallel dorsal and ventral processing streams concerned with dissociable aspects of motor and conceptual-semantic processing. Drawing on converging evidence from pathology, neuroimaging, behavioral research, and histology, Gow (2012) proposes that each pathway has its own lexicon or lexical interface area, which mediates mappings between acoustic-phonetic representation and stream-specific processing. The purpose of this project is to ask why humans have evolved two lexicons, rather than a single lexicon that interacts with both processing streams. Specifically, we ask whether computational demands on the mapping between acoustic-phonetic input and stream-specific processing create pressure for the development of different computationally efficient featural representations of words in the dorsal and ventral streams. We find that networks trained on the mapping between sound and articulation perform poorly in recognizing the mapping between sound and meaning and vice versa. We then show networks developed internal representations reflecting specialized task optimized functions without explicit training. Together, these findings indicate that functional specialization of word representation may reflect a computational optimization given the structure of the tasks that brains must solve, namely, different featural projections of wordform may be needed to support efficient linguistic processing.
-
 
 ## Paper Citation
 Avcu, E., Hwang, M., Brown, K., Gow, D. (under review). A tale of two lexica: Investigating computational pressures on word representation with deep neural networks. Submitted to Neurobiology of Language Special Issue: Cognitive Computational Neuroscience of Language.
 
 ## Hardware, and Software
 Simulations were conducted on a Linux workstation with an Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz, 98-gb of RAM, and an NVIDIA Quadro RTX 8000 (48-gb) graphics card. Simulations were conducted using Python 3.6, TensorFlow 2.2.0, and Keras 2.4.3. Each model requires approximately 48 hours to train on this workstation. This repository provides an up-to-date container with all necessary explanations and jupyter notebooks for running our training code and analyses.
-
 
 ## Data
 ### Training Data
@@ -34,4 +32,6 @@ We created 3 tasks. The first task was the word identification task where each w
 ![image](https://user-images.githubusercontent.com/32641692/164541042-173bdc70-88da-4ed8-a492-c0a6f13d2ae7.png)
 
 ## Hidden Unit Selectivity Analyses
+We checked whether hidden units of both networks encode information related to phoneme, morpheme, and root representation. Therefore, we developed three selectivity indices (SIs). The Phonemic Selectivity Index (PSI), adapted from Mesgarani et al. (2014) and Magnuson et al. (2020), quantifies the hidden unit’s response to a target phoneme relative to all the other phonemes. The Morpheme Selectivity Index (MSI) quantifies the selectivity of each hidden unit’s response to a target derivational or inflectional morpheme relative to all the other morphemes. We used all the root plus one affix words in our lexicon to extract each hidden unit’s response to each of the 20 morphemes over the full-time window. The Root Selectivity Index (RSI) shows the hidden unit’s response to a target root where all the other roots are controlled. We used 40 randomly chosen roots among the 252 roots in our lexicon to extract each hidden unit’s response to these roots over the full-time window. See below for an example figure that shows hidden unit selectivities to 39 English phonemes.
+![image](https://user-images.githubusercontent.com/32641692/164761394-b46f3394-d4ae-489c-a727-d60da2dbe9ea.png)
 
