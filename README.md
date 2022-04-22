@@ -37,7 +37,7 @@ We created 3 tasks. The first task was the word identification task where each w
 <p align="center">
   <img 
     width="800"
-    height="500"
+    height="400"
     src="https://user-images.githubusercontent.com/32641692/164541042-173bdc70-88da-4ed8-a492-c0a6f13d2ae7.png"
   >
 </p>
