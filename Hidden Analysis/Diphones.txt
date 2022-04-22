@@ -1,0 +1,2 @@
+To calculate the PSI's diphone cochleagrams are needed. THerefore, download diphone wav files here https://drive.google.com/file/d/1poWuCQ1_09jBSaIZJbj5KvBLl4HejdH3/view
+And then convert them to cochleagrams using our cochleagram generation code.
