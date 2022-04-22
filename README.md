@@ -36,7 +36,7 @@ During the training, we checkpointed (saved the model and weights in a checkpoin
 We created 3 tasks. The first task was the word identification task where each word token was grouped into its own word type (with ten tokens) resulting in 883 categories. The second task was the articulatory generalization task where words were grouped into seven categories based on the manner of articulation of the initial (onset) phoneme: vowels, voiced stops, voiceless stops, fricatives, nasals, liquids, or glides. The final task was the semantic/syntactic generalization task where words were grouped into nine parts of speech categories: singular (NN) and plural (NNS) nouns, adjectives (JJ) and comparative adjectives (JJR), base (VB), past (VBD), gerund (VBG), present (VBZ) verbs and finally adverbs (RB). We extracted the activation in the hidden layer of the best performing network (before the sigmoid layer where the classification happens) to 8830 words (cochleagrams) categorized into 883 (word identification task), 7 (articulatory task), and 9 (semantic/syntactic task) classes, respectively. The features (hidden layer activations) were extracted from both models at every time point (0 to 225). See the paper for the details of decoding steps which were done in Python using the numpy and sklearn libraries (Pedrogosa et al., 2011). See generalization task results below, which shows representations learned for one task do not support the other which means task-specific representations are required for each task
 <p align="center">
   <img 
-    width="800"
+    width="600"
     height="500"
     src="https://user-images.githubusercontent.com/32641692/164541042-173bdc70-88da-4ed8-a492-c0a6f13d2ae7.png"
   >
