@@ -21,7 +21,13 @@ We used cochleagrams of each sound file as the input to the network. A cochleagr
 
 ## Models
 We created two separate LSTM models and trained them independently on the same training data (8830 tokens for 883 words). Dorsal network was trained to differentiate between words using arbitrary information and a ventral network was trained to distinguish words based on distributional properties. See the paper for details. Models/Dorsal.ipynb and Models/Ventral.ipynb files have the model training codes with necessay componenets (partition data and output labels). Models folder also has best dorsal and ventral models which were used to calculate accuracy and extract activation patterns. See model structure below.
-
+<p align="center">
+  <img 
+    width="300"
+    height="300"
+    src="https://user-images.githubusercontent.com/32641692/164526923-b5879933-edd6-4482-89cc-3bdfc01f92c5.png"
+  >
+</p>
 ![image](https://user-images.githubusercontent.com/32641692/164526923-b5879933-edd6-4482-89cc-3bdfc01f92c5.png)
 
 During the training, we checkpointed (saved the model and weights in a checkpoint file) the model every 100 epochs, so that we could load the model and calculate our accuracy metrics as training time increased. We used cosine similarity as the accuracy metric. Please refer to the paper for details.
