@@ -6,7 +6,7 @@ Words play a pivotal role in almost every aspect of language processing. The dua
 
 <p align="center">
   <img 
-    width="400"
+    width="600"
     height="400"
     src="https://user-images.githubusercontent.com/32641692/216451019-59c259e8-cc58-44db-8456-eb7e71ddcab9.png"
   >
