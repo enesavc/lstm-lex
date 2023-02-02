@@ -28,7 +28,7 @@ We used cochleagrams of each sound file as the input to the network. A cochleagr
 </p>
 
 ## Models
-We created two separate LSTM models and trained them independently on the same training data (8830 tokens for 883 words). Dorsal network was trained to differentiate between words using arbitrary information and a ventral network was trained to distinguish words based on distributional properties. See the paper for details. Models/Dorsal.ipynb and Models/Ventral.ipynb files have the model training codes with necessay componenets (partition data and output labels). Models folder also has best dorsal and ventral models which were used to calculate accuracy and extract activation patterns. See model structure below.
+We created three LSTM networks to test this hypothesis and trained them independently on the same set of auditory word tokens. A dorsal network was trained to map words onto vectors representing whole-word articulatory properties so that the level of linguistic description that it is capturing would be phonological. In contrast, a ventral network was trained to map words onto vectors reflecting broad distributional semantic properties to capture semantic content. We also created a fused model that was trained on both tasks simultaneously to provide a direct comparison of the computational efficiency of parallel versus single-stream wordform mapping. See the paper for details. Models/Dorsal.ipynb, Models/Fused.ipynb and Models/Ventral.ipynb files have the model training codes with necessay componenets (partition data and output labels). Models folder also has best dorsal and ventral models which were used to calculate accuracy and extract activation patterns. See model structure below.
 <p align="center">
   <img
     width="400"
